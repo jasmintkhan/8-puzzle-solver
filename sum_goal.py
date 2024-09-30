@@ -1,5 +1,4 @@
 # Jasmin Khan
-# credit: TA assistance from Samarth Khanna, thank you! 
 
 from collections import deque # using deque (double-ended queue) for BFS
 import heapq # using priority queue for UCS and A*
@@ -205,45 +204,45 @@ if __name__ == "__main__":
     start_state = read_initial_state_from_file('input.txt').replace(",", "")  # convert from input format to raw string
 
     solution, expansion = dfs(start_state)
-    print("The solution of Q2.1.a is:")
+    print("The DFS solution is:")
     if solution :
         print(','.join(solution))  # print the actual solution path
-        #print(f"node expansions: {expansion}")
+        print(f"node expansions: {expansion}")
     else:
         print("No solution found.")
 
     print()
     solution, expansion = bfs(start_state)
-    print("The solution of Q2.1.b is:")
+    print("The BFS solution is:")
     if solution:
         print(','.join(solution))  # print the actual solution path
-        #print(f"node expansions: {expansion}")
+        print(f"node expansions: {expansion}")
     else:
         print("No solution found.")
 
     print()
     solution, expansion = ucs(start_state)
-    print("The solution of Q2.1.c is:")
+    print("The UCS solution is:")
     if solution:
         print(','.join(solution))  # print the actual solution path
-        #print(f"node expansions: {expansion}")
+        print(f"node expansions: {expansion}")
     else:
         print("No solution found.")
 
     print()
     solution, expansion = a_star(start_state, manhattan_distance)
-    print("The solution of Q2.1.d is:")
+    print("The A_STAR solution (Manhattan) is:")
     if solution:
         print(','.join(solution))  # print the actual solution path
-        #print(f"node expansions: {expansion}")
+        print(f"node expansions: {expansion}")
     else:
         print("No solution found.")
 
     print()
     solution, expansion = a_star(start_state, euclidean_distance)
-    print("The solution of Q2.1.e is:")
+    print("The A_STAR solution (Euclidean) is:")
     if solution:
         print(','.join(solution))  # print the actual solution path
-        #print(f"node expansions: {expansion}")
+        print(f"node expansions: {expansion}")
     else:
         print("No solution found.")
